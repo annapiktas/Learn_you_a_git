@@ -13,7 +13,9 @@ repository in everyday work (and home life if you want.)
 #### Mac OS:
 
 The recommended method for this is to use Homebrew. 
-HomeBrew `brew install git` 
+HomeBrew `brew update && brew install git` 
+
+Current issue: may not support MacOS 13.1
 
 (If you don't have HomeBrew, I recommend it, instructions [here](https://brew.sh/).) 
 
