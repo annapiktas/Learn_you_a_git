@@ -17,18 +17,22 @@ HomeBrew `brew install git`
 
 (If you don't have HomeBrew, I recommend it, instructions [here](https://brew.sh/).) 
 
-Windows:
+#### Windows:
+
 Download the latest installer from [here](https://git-scm.com/download/win)
 
-
-Linux: 
+#### Linux: 
 Unlikely that many are using this, but: 
+
 Debian based distros: 
 `sudo apt update && sudo apt install git -y`
+
 Redhat based distros:
 `sudo yum install git -y`
+
 If you use a non-debian or redhat derived distro, I trust that you already know how to install git using your package 
 manager. 
+
 
 ### Clone this repository
 A repository is a (mostly) self-contained source code directory which has a `.git`  directory in it. Most of the time
@@ -55,8 +59,8 @@ Now you have this repository on your local machine! You can do whatever you like
 it won't affect the copy on Github. In fact you won't be able to change any of the code on the github repository from 
 this clone, because you're not a member of the repository, 
 
-### How can I make changes then?
 
+### How can I make changes then?
 
 There's two ways, you can be a member of the repository which would give you a certain access level, perhaps commit 
 access to certain branches (more on branching later), merge access (ditto), or other rights. But the way we're going to 
@@ -71,3 +75,24 @@ You can then delete the old repository and clone your new copy of the repository
 changes to the existing code already, this should look basically identical in your IDE/text editor. 
 
 ### Now for a brief aside on the Git model
+
+#### How git works: 
+I've previously given a talk on this at The Fast and The Curious, and the slide deck is available 
+[here](https://docs.google.com/presentation/d/1jIgWOgrlOuTkLixW-zFbF68QW_q1JEMQa7PccUIOZeo/edit?usp=sharing). However, a
+brief summary follows: 
+
+* Git is primarily a version control system, it tracks changes you tell it to in files you tell it about. 
+* To tell git about a file or change, you _stage_ or _add_ it.
+* To tell git to write the changes you've added to its database, you _commit_
+* Commits should have a descriptive, but short, commit message. Add this using the `-m` flag as in `git commit -m`
+* Git's not just on your machine necessarily! Most often it's used with a central repository server, like 
+Github/Gitlab/Bitbucket
+* To tell the server about changes you've made and committed, you need to `git push`
+* To get a new repository from the server, you need to `git clone <protocol@repository>` as above.
+* To get changes from the server, you need to `git fetch`, to apply them to your working directory as well, you need to 
+`git pull`
+* When many people are working on the same repository, it's normal to have your own versions of the repository, called
+branches. There's many ways to create a branch, but I like `git checkout -b <my new branch name>`. You can normally create
+them through the web interface as well. 
+* 
+
