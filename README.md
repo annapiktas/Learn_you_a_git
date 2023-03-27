@@ -75,8 +75,9 @@ You can then delete the old repository and clone your new copy of the repository
 changes to the existing code already, this should look basically identical in your IDE/text editor. 
 
 ### Now for a brief aside on the Git model
+![graph of the git model](git.jpeg "A picture of the Git model")
 
-#### How git works: 
+#### working with Git: 
 I've previously given a talk on this at The Fast and The Curious, and the slide deck is available 
 [here](https://docs.google.com/presentation/d/1jIgWOgrlOuTkLixW-zFbF68QW_q1JEMQa7PccUIOZeo/edit?usp=sharing). However, a
 brief summary follows: 
@@ -92,7 +93,16 @@ Github/Gitlab/Bitbucket
 * To get changes from the server, you need to `git fetch`, to apply them to your working directory as well, you need to 
 `git pull`
 * When many people are working on the same repository, it's normal to have your own versions of the repository, called
-branches. There's many ways to create a branch, but I like `git checkout -b <my new branch name>`. You can normally create
-them through the web interface as well. 
-* 
+branches. There's many ways to create a branch, but I like `git checkout -b <my new branch name>`. You can normally 
+create them through the web interface as well. 
+* The really strange thing about git is merging branches. That is taking two streams of work and pushing them together,
+not because this is a strange thing to do, but because you merge from the point of view of the branch being merged into 
+so merging main into your branch is `git merge main` and merging your branch into main...
+* is normally done with a Merge/Pull request. Which it is depends on your platform, for Github, it's a Pull Request, so 
+we'll use that language. 
 
+### So here's your homework:
+1) Fork this repo
+2) Clone your fork to your machine
+3) Add your name to `src/resources/names.txt`, does not need to be your real name, this is a public repo.
+4) Submit a pull request back to my repo. You do this [through the web interface](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork). 
